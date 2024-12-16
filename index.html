@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Southern Province Weather - Current & 5-Day Forecast</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <video id="backgroundVideo" autoplay muted loop></video>
+
+    <header class="header">
+      <h1>WEATHER UPDATE IN CENTRAL PROVINCE</h1>
+      <p class="subheading"></p>
+    </header>
+
+    <div class="tabs">
+      <button class="tab-btn active" onclick="openTab(event, 'currentWeather')">Current Weather</button>
+      <button class="tab-btn" onclick="openTab(event, 'forecastSection')">5-Day Forecast</button>
+    </div>
+
+    <div id="currentWeather" class="tab-content active">
+      <div class="search-bar">
+        <input type="text" id="cityInput" placeholder="Enter city name...">
+        <button onclick="searchWeather()">Search</button>
+      </div>
+
+      <div class="weather-info">
+        <h2 id="cityName"></h2>
+        <div id="localTime"></div>
+        <img id="weatherIcon" src="" alt="Weather Icon">
+        <p id="temperature"></p>
+        <p id="weatherCondition"></p>
+        <p id="humidity"></p>
+        <p id="windSpeed"></p>
+      </div>
+    </div>
+
+    <div id="forecastSection" class="tab-content">
+      <h3>5-Day Forecast (Monday to Friday)</h3>
+      <div id="forecast" class="forecast"></div>
+    </div>
+  </div>
+
+  <footer>
+    <span class="credits">Ward Name, central. Designed and Maintained by Taonga Mkandwire, SIN: 2107286802</span>
+    <ul class="footer-links">
+      <li><a href="https://zrdc.org/">ZRDC</a></li>
+      <li><a href="https://www.icuzam/">ICU Zambia</a></li>
+    </ul>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
